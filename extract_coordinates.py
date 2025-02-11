@@ -11,7 +11,7 @@ def extract_coordinates(file_path):
         longitudes = [lon.strip() for lon in longitude_pattern.findall(data)]
         latitudes = [lat.strip() for lat in latitude_pattern.findall(data)]
 
-        coordinates = list(zip(longitudes, latitudes))
+        coordinates = list(zip(latitudes, longitudes))
 
 
         return coordinates
@@ -28,4 +28,3 @@ if __name__ == "__main__":
     with open('coordinates.txt', 'w', encoding='utf-8') as f:
         for lon, lat in coordinates:
             f.write(f"{lon}, {lat}\n")
-    print(coordinates)
