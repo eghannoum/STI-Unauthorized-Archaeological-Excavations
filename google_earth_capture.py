@@ -44,4 +44,4 @@ for coordinate in coordinates_list:
     url = generate_google_earth_url(coordinate[0], coordinate[1])
     webbrowser.open(url, new=0)
     time.sleep(5)
-    capture = pyautogui.screenshot(f'screenshot_{coordinate[0]}_{coordinate[1]}.png')
+    capture = pyautogui.screenshot(f'screenshot_{coordinate[0]}_{coordinate[1]}.png', region=(0,0, 1920, 1080))
