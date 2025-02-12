@@ -26,5 +26,5 @@ if __name__ == "__main__":
     file_path = 'coordinates_of_archaeological_sites.kml'
     coordinates = extract_coordinates(file_path)
     with open('coordinates.txt', 'w', encoding='utf-8') as f:
-        for lon, lat in coordinates:
-            f.write(f"{lon}, {lat}\n")
+        for latitude, longitudes in coordinates:
+            f.write(f"{latitude}, {longitudes}\n")
