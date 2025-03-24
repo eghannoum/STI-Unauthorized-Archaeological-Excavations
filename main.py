@@ -222,7 +222,7 @@ if __name__ == "__main__":
     processor = EnhancedDataProcessor(
         data_path='result.json',
         image_dir='.',
-        output_dir='./enhanced_data'
+        output_dir='./data'
     )
     
     processor.run_pipeline(
