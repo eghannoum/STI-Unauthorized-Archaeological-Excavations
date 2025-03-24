@@ -14,7 +14,7 @@ BOX_COLOR = (255, 0, 0)
 TEXT_COLOR = (255, 255, 255)
 CATEGORY_ID_TO_NAME = {1: 'hole'}
 
-class EnhancedDataProcessor:
+class DataProcessor:
     def __init__(self, data_path, image_dir, output_dir):
         self.data = self.load_data(data_path)
         self.image_dir = image_dir
@@ -219,7 +219,7 @@ class EnhancedDataProcessor:
         print(f"Test set: {final_test} images")
 
 if __name__ == "__main__":
-    processor = EnhancedDataProcessor(
+    processor = DataProcessor(
         data_path='result.json',
         image_dir='.',
         output_dir='./data'
